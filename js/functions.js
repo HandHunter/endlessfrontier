@@ -57,7 +57,7 @@ function playSound(obj) {
 function onCloseNotification() {
     "use strict";
     
-    notificationSound.stop();
+    //notificationSound.stop();
 }
 
 function TimerUpdate(obj) {
