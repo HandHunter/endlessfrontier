@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Title</title>
+        <meta name="description" content="">
+        <meta name="author" content="Alexander Borgviken">
+        
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        
+        <div class="timerContainer" id="spiritRest">
+            <div class="mainTitle">Spirit Rest</div>
+            <div class="contentContainer">
+                <div class="timerBox">
+                    <div class="progress">
+                        <span class="value" style="width: 100%"></span>
+                        <div class="text">100%</div>
+                    </div>
+                    <button class="flexButton" onclick="SetTimer(spiritRest, 60 * 4)">4h</button>
+                    <button class="flexButton" onclick="SetTimer(spiritRest, 60 * 8)">8h</button>
+                    <button class="flexButton" onclick="SetTimer(spiritRest, 1 / 60)">Test</button>
+                </div>
+                <div class="settings">
+                    <div class="column">
+                        <span class="title">Sound</span>
+                        <select class="alertSound" onchange="setSound(spiritRest)">
+                            <option value="0">Beep</option>
+                            <option value="1">DBZ</option>
+                            <option value="2">Seagulls</option>
+                            <option value="3">Breathing</option>
+                            <option value="4">Christmas</option>
+                            <option value="5">Bells</option>
+                        </select>
+                        <button onclick="playSound(spiritRest)">P</button>
+                    </div>
+                    <div style="width: 10px"></div>
+                    <div class="column">
+                        <span class="title">Volume</span>
+                        <input class="volume" onchange="setVolume(spiritRest)" type="range" value="100" min="0" max="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timerContainer" id="unitRefresh">
+            <div class="mainTitle">Unit Refresh</div>
+            <div class="contentContainer">
+                <div class="timerBox">
+                    <div class="progress">
+                        <span class="value" style="width: 100%"></span>
+                        <div class="text">100%</div>
+                    </div>
+                    <button class="flexButton" onclick="SetTimer(unitRefresh, 30)">30m</button>
+                    <button class="flexButton" onclick="SetTimer(unitRefresh, 60)">60m</button>
+                </div>
+                <div class="settings">
+                    <div class="column">
+                        <span class="title">Sound</span>
+                        <select class="alertSound" onchange="setSound(unitRefresh)">
+                            <option value="0">Beep</option>
+                            <option value="1">DBZ</option>
+                            <option value="2">Seagulls</option>
+                            <option value="3">Breathing</option>
+                            <option value="4">Christmas</option>
+                            <option value="5">Bells</option>
+                        </select>
+                        <button onclick="playSound(unitRefresh)">P</button>
+                    </div>
+                    <div style="width: 10px"></div>
+                    <div class="column">
+                        <span class="title">Volume</span>
+                        <input class="volume" onchange="setVolume(unitRefresh)" type="range" value="100" min="0" max="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timerContainer" id="speedBoost">
+            <div class="mainTitle">Speed Boost</div>
+            <div class="contentContainer">
+                <div class="timerBox">
+                    <div class="progress">
+                        <span class="value" style="width: 100%"></span>
+                        <div class="text">100%</div>
+                    </div>
+                    <button class="flexButton" onclick="SetTimer(speedBoost, 20)">20m</button>
+                </div>
+                <div class="settings">
+                    <div class="column">
+                        <span class="title">Sound</span>
+                        <select class="alertSound" onchange="setSound(speedBoost)">
+                            <option value="0">Beep</option>
+                            <option value="1">DBZ</option>
+                            <option value="2">Seagulls</option>
+                            <option value="3">Breathing</option>
+                            <option value="4">Christmas</option>
+                            <option value="5">Bells</option>
+                        </select>
+                        <button onclick="playSound(speedBoost)">P</button>
+                    </div>
+                    <div style="width: 10px"></div>
+                    <div class="column">
+                        <span class="title">Volume</span>
+                        <input class="volume" onchange="setVolume(speedBoost)" type="range" value="100" min="0" max="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery.color.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/notify.js"></script>
+        <script src="js/howler.min.js"></script>
+        <script src="js/date.js"></script>
+        <script src="js/functions.js"></script>
+    </body>
+
+</html>

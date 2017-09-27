@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    color: aliceblue;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 256);
+}
+
+.timerContainer {
+    width: 600px;
+    margin: 15px auto;
+}
+
+.timerBox, .column {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: rgba(80, 80, 80, 256);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px auto;
+}
+
+.mainTitle {
+    /*position: relative;*/
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.title {
+    position: relative;
+    min-width:100px;
+    top: 3px;
+}
+
+.progress {
+    height: 1.5em;
+    width: 100%;
+    background-color: grey;
+    border-radius: 5px;
+    position: relative;
+}
+
+.value {
+    height: 1.5em;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    background: #050;
+}
+
+.text {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 3px;
+}
+
+.flexButton {
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: #555;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    outline: none;
+    min-width: 50px;
+    max-width: 50px;
+    margin: 0px 5px;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+.alertSound {
+    width: 80%;
+}
+
+.column button {
+    width: 30px;
+    margin-left: 5px;
+    border-radius: 5px;
+    outline: none;
+    background: #777;
+    text-align: center;
+    top: 1px;
+}
+
+input, select {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.settings {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.settings select {
+    background: #353535;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+.contentContainer {
+    background-color: rgba(50, 50, 50, 256);
+    border-radius: 5px;
+    padding: 5px;
+}
