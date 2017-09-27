@@ -90,14 +90,12 @@ function TimerUpdate(obj) {
     
     $("#" + obj.str + " .value").css("width", percent + "%");
     $("#" + obj.str + " .text").html(newTimeStr + Math.floor(percent) + "%");
-    
 }
 
 function SetTimer(obj, time) {
-    $("#spiritRest .value").animate({
+    $("#" + obj.str + " .value").animate({
         backgroundColor: "#028"
     }, 500);
-    //$("#spiritRest .value").css("background", "#005");
     
     localStorage.setItem(obj.str + "_start", Date.now());
     localStorage.setItem(obj.str + "_end", (time).minutes().fromNow());
@@ -133,6 +131,7 @@ function initialize(obj) {
     // Set the text and progress bar width
     if ((new Date(obj.endTime) - Date.now()) > 0) {
         obj.timer = setInterval(function () { TimerUpdate(obj); }, 100);
+        $("#" + obj.str + " .value").css("background", "#028");
     } else {
         $("#" + obj.str + " .value").css("width", "100%");
         $("#" + obj.str + " .text").html("100%");
