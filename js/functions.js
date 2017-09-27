@@ -57,7 +57,7 @@ function playSound(obj) {
 function onCloseNotification() {
     "use strict";
     
-    //notificationSound.stop();
+    notificationSound.stop();
 }
 
 function TimerUpdate(obj) {
@@ -84,18 +84,20 @@ function TimerUpdate(obj) {
         if (!Notify.needsPermission) {
             obj.notification.show();
         }
+        
+        $("#" + obj.str + " .value").css("background", "#050");
     }
     
     $("#" + obj.str + " .value").css("width", percent + "%");
     $("#" + obj.str + " .text").html(newTimeStr + Math.floor(percent) + "%");
     
-    $("#" + obj.str + " .value").css("background", "#050");
 }
 
 function SetTimer(obj, time) {
     $("#spiritRest .value").animate({
-        backgroundColor: "#005"
-    }, 1000);
+        backgroundColor: "#028"
+    }, 500);
+    //$("#spiritRest .value").css("background", "#005");
     
     localStorage.setItem(obj.str + "_start", Date.now());
     localStorage.setItem(obj.str + "_end", (time).minutes().fromNow());
