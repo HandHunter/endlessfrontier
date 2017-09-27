@@ -49,9 +49,8 @@ function setVolume(obj) {
 }
 
 function playSound(obj) {
-    var idx = localStorage.getItem(obj.str + "_sound");
     Howler.volume(localStorage.getItem(obj.str + "_volume") / 100);
-    notificationSounds[idx].play();
+    notificationSounds[localStorage.getItem(obj.str + "_sound")].play();
 }
 
 
@@ -81,12 +80,10 @@ function TimerUpdate(obj) {
         percent = 100;
         $("#" + obj.str + " .value").css("background", "#050");
         
-        notificationSound.play();
-        /*
+        playSound(obj);
         if (!Notify.needsPermission) {
             obj.notification.show();
         }
-        */
     }
     
     $("#" + obj.str + " .value").css("width", percent + "%");
