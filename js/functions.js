@@ -31,6 +31,17 @@ var speedBoost = {
     })
 };
 
+var runTimer = {
+    str: "runTimer",
+    timer: null,
+    notification: new Notify('Run Timer', {
+        icon: 'resources/speedBoost.png',
+        body: 'Run is over!',
+        notifyClose: onCloseNotification,
+        timeout: 5
+    })
+};
+
 var notificationSounds = [
     new Howl({ src: ['resources/sound/beep.ogg'] }),
     new Howl({ src: ['resources/sound/dbz.wav'] }),
@@ -81,9 +92,10 @@ function TimerUpdate(obj) {
         $("#" + obj.str + " .value").css("background", "#050");
         
         playSound(obj);
-        if (!Notify.needsPermission) {
-            obj.notification.show();
-        }
+        
+        //if (!Notify.needsPermission) {
+        //    obj.notification.show();
+        //}
         
         $("#" + obj.str + " .value").css("background", "#050");
     }
